@@ -1,0 +1,33 @@
+1. debugee input/output buffering problem.
+- use stdbuf. if there is no such thing. just pass..?
+
+2. jmp, je kind of instructions getting sliced...??
+- no idea.
+
+3. pointer traversing commands
+- to be implemented.
+
+4. ctrl-c handling
+use ps -o pid,ppid and send SIGINT(kill -SIGINT [pid]) to debugee process(not gdb)
+root@ubuntu:/var/www/share# ps -o pid,ppid,cmd
+  PID  PPID CMD
+ 3222  3155 su
+ 3231  3222 bash
+ 5870     1 gdb --args b
+ 5876  5870 /mnt/hgfs/ubuntu32/b
+ 5898     1 gdb --args b
+ 5904  5898 /mnt/hgfs/ubuntu32/b
+ 5980  3231 ps -o pid,ppid,cmd
+root@ubuntu:/var/www/share# 
+
+5. attach support
+
+6. input processing while gdb not responding
+- to be implemented.(do not use multithreading. simply shorten the timeout and don't print pira> if timeout occurs. unless it is expected, e.g. silent gdb command)
+
+7. in STATIC mode, cut output(more)
+
+8. tab auto complete
+
+9. left, right cursor on terminal command...
+

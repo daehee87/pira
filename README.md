@@ -1,6 +1,9 @@
 # what is pira?
 Python based InteRActive interface support for gdb (name is inspired from QIRA)
+
 main feature is 'arrow based forward/backword navigation for GDB si/ni command results'
+
+
 
 # requirement
 Python 2.x & gdb & stdbuf
